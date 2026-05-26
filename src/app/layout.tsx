@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Base64 Converter - Premium File & Text Base64 Converter",
+  title: "Base64 Converter - File & Text Base64 Converter",
   description: "Convert files (images, documents, PDFs) and text to Base64 in multiple formats, or decode Base64 back to files. 100% private, secure, client-side, and instant.",
 };
 
