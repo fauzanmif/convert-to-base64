@@ -110,7 +110,7 @@ export default function FileToBase64() {
           onDrop={handleDrop}
           className={`glass-panel rounded-2xl p-10 text-center flex flex-col items-center justify-center border border-dashed transition-all duration-300 cursor-pointer min-h-[300px] select-none ${
             isDragging
-              ? "border-purple-500 bg-purple-500/[0.04] glow-border-purple scale-[1.01]"
+              ? "border-amber-500 bg-amber-500/[0.04] shadow-[0_0_20px_-5px_rgba(255,210,85,0.3)] scale-[1.01]"
               : "border-card-border hover:bg-zinc-150/40 dark:hover:bg-white/[0.01]"
           }`}
           onClick={triggerFileInput}
@@ -119,12 +119,12 @@ export default function FileToBase64() {
 
           {isLoading ? (
             <div className="flex flex-col items-center gap-3">
-              <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
-              <p className="text-sm font-medium text-purple-600 dark:text-purple-400">Processing file secure sandbox...</p>
+              <div className="w-10 h-10 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
+              <p className="text-sm font-medium text-amber-600 dark:text-amber-400">Processing file secure sandbox...</p>
             </div>
           ) : file ? (
             <div className="flex flex-col items-center gap-4 w-full">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 shadow-inner">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500/10 to-yellow-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 shadow-inner">
                 <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -161,7 +161,7 @@ export default function FileToBase64() {
           ) : (
             <div className="flex flex-col items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-card-border flex items-center justify-center text-zinc-500 dark:text-zinc-400 shadow-inner transition-transform duration-300 group-hover:scale-105">
-                <svg className="w-6 h-6 text-purple-650 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                <svg className="w-6 h-6 text-amber-500 dark:text-[#FFD255]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -191,7 +191,7 @@ export default function FileToBase64() {
                     onClick={() => setExportFormat(fmt)}
                     className={`px-3 py-1.5 rounded-md text-xs font-mono capitalize transition-all cursor-pointer ${
                       exportFormat === fmt
-                        ? "bg-purple-600 text-white shadow-inner font-semibold"
+                        ? "bg-[#FFD255] text-zinc-900 shadow-inner font-bold"
                         : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
                     }`}
                   >
@@ -203,7 +203,7 @@ export default function FileToBase64() {
               <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
                 <button
                   onClick={copyToClipboard}
-                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/20 text-purple-700 dark:text-purple-300 transition-colors cursor-pointer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-[#FFD255]/10 hover:bg-[#FFD255]/20 border border-[#FFD255]/20 text-amber-700 dark:text-[#FFD255] transition-colors cursor-pointer"
                 >
                   {copiedFormat === exportFormat ? (
                     <>
@@ -273,7 +273,7 @@ export default function FileToBase64() {
               <textarea
                 readOnly
                 value={formattedOutput}
-                className="w-full h-48 bg-zinc-950 border border-zinc-800 rounded-xl p-4 font-mono text-xs text-zinc-300 focus:outline-none focus:border-purple-500/40 select-all resize-none shadow-inner"
+                className="w-full h-48 bg-zinc-950 border border-zinc-800 rounded-xl p-4 font-mono text-xs text-zinc-300 focus:outline-none focus:border-amber-500/40 select-all resize-none shadow-inner"
               />
             </div>
           </div>
@@ -285,7 +285,7 @@ export default function FileToBase64() {
         {/* Dynamic Preview Drawer */}
         <div className="glass-panel rounded-2xl p-6 border border-card-border flex flex-col gap-4">
           <h3 className="text-sm font-semibold tracking-tight text-zinc-800 dark:text-zinc-300 flex items-center gap-1.5">
-            <svg className="w-4 h-4 text-purple-650 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <svg className="w-4 h-4 text-amber-500 dark:text-[#FFD255]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               <path
                 strokeLinecap="round"
@@ -321,7 +321,7 @@ export default function FileToBase64() {
         {/* Analytics Card */}
         <div className="glass-panel rounded-2xl p-6 border border-card-border flex flex-col gap-4 relative overflow-hidden">
           <h3 className="text-sm font-semibold tracking-tight text-zinc-800 dark:text-zinc-300 flex items-center gap-1.5 border-b border-card-border pb-3">
-            <svg className="w-4 h-4 text-purple-650 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <svg className="w-4 h-4 text-amber-500 dark:text-[#FFD255]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -340,7 +340,7 @@ export default function FileToBase64() {
             </div>
             <div className="bg-zinc-100/50 dark:bg-zinc-950/40 border border-card-border p-3.5 rounded-xl">
               <span className="text-[10px] text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block font-mono font-bold">Base64 Length</span>
-              <span className="text-lg font-bold font-mono tracking-tight text-purple-650 dark:text-purple-400 mt-1 block">
+              <span className="text-lg font-bold font-mono tracking-tight text-amber-500 dark:text-[#FFD255] mt-1 block">
                 {base64 ? base64Length.toLocaleString() : "0"}
               </span>
             </div>
@@ -349,7 +349,7 @@ export default function FileToBase64() {
           <div className="flex flex-col gap-2.5 mt-1 text-xs text-zinc-600 dark:text-zinc-400 font-mono">
             <div className="flex items-center justify-between border-b border-card-border pb-1.5">
               <span>Overhead Premium</span>
-              <span className={base64 ? "text-pink-600 dark:text-pink-400 font-bold" : "text-zinc-400 dark:text-zinc-600"}>
+              <span className={base64 ? "text-amber-500 dark:text-[#FFD255] font-bold" : "text-zinc-400 dark:text-zinc-600"}>
                 {base64 ? `+${sizeOverheadPercentage}%` : "0%"}
               </span>
             </div>

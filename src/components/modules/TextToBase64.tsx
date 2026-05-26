@@ -23,7 +23,7 @@ export default function TextToBase64() {
       {/* Swap Header Controls */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-zinc-150/40 dark:bg-zinc-900/30 border border-card-border p-4 rounded-2xl backdrop-blur-md transition-colors duration-300">
         <div className="flex items-center gap-3">
-          <div className="px-3 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-xs font-mono font-bold text-purple-600 dark:text-purple-300">
+          <div className="px-3 py-1 rounded bg-amber-500/10 border border-amber-500/20 text-xs font-mono font-bold text-amber-600 dark:text-[#FFD255]">
             {isEncodeDirection ? "Text ➔ Base64" : "Base64 ➔ Text"}
           </div>
           <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">Real-time Unicode (UTF-8) translation sandboxed</span>
@@ -91,7 +91,7 @@ export default function TextToBase64() {
           <button
             onClick={handleSwap}
             type="button"
-            className={`w-12 h-12 rounded-full border border-card-border bg-white dark:bg-zinc-900/80 hover:bg-zinc-150 dark:hover:bg-zinc-800 flex items-center justify-center text-purple-600 dark:text-purple-400 shadow-lg dark:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer glow-border-purple ${
+            className={`w-12 h-12 rounded-full border border-card-border bg-white dark:bg-zinc-900/80 hover:bg-zinc-150 dark:hover:bg-zinc-800 flex items-center justify-center text-amber-600 dark:text-[#FFD255] shadow-lg dark:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer shadow-[0_0_20px_-5px_rgba(255,210,85,0.25)] hover:border-amber-500/30 ${
               isRotating ? "rotate-[180deg]" : ""
             }`}
             title="Swap Conversion Direction"
