@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full py-8 border-t border-card-border bg-zinc-50/50 dark:bg-[#050507]/60 backdrop-blur-sm transition-all duration-300">
+    <footer className="w-full py-8 border-t border-card-border bg-white/50 dark:bg-black/60 backdrop-blur-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-500 dark:text-zinc-400 font-mono font-medium">
         <div>
           &copy; {new Date().getFullYear()} Base64 Nexus. Built with dynamic precision.

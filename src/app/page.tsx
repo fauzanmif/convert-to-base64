@@ -12,7 +12,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>("file-to-base64");
 
   return (
-    <div className="min-h-screen bg-background bg-accent-radial text-foreground flex flex-col font-sans selection:bg-purple-500/30 selection:text-purple-900 dark:selection:text-purple-200 transition-colors duration-300">
+    <div className="min-h-screen bg-background bg-accent-radial text-foreground flex flex-col font-sans selection:bg-[#FFD255]/30 selection:text-zinc-900 dark:selection:text-[#FFD255] transition-colors duration-300">
       {/* Dynamic Background Glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-pulse-1 rounded-full blur-3xl pointer-events-none animate-pulse-slow transition-colors duration-300" />
       <div className="absolute top-10 right-1/4 w-96 h-96 bg-accent-pulse-2 rounded-full blur-3xl pointer-events-none animate-pulse-slow transition-colors duration-300" style={{ animationDelay: "2s" }} />
